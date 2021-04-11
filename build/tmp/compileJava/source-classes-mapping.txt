@@ -1,2 +1,4 @@
 com/app/doggi/DoggiApplication.java
  com.app.doggi.DoggiApplication
+com/app/doggi/model/DogBreed.java
+ com.app.doggi.model.DogBreed
