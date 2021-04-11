@@ -7,8 +7,6 @@ public class DogBreedStdInDto {
 
     //Atrtibutes
 
-    private Long id;
-
     private String name;
 
     private double weight;
