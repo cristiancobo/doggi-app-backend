@@ -5,16 +5,15 @@ import javax.persistence.Id;
 
 public class DogBreedStdOutDto {
     //Atrtibutes
-    @Id
-    @Column(name = "ID", nullable = false)
+
     private Long id;
-    @Column(name = "NAME", nullable = false)
+
     private String name;
-    @Column(name = "WEIGHT", nullable = false)
+
     private double weight;
-    @Column(name = "HEIGHT", nullable = false)
+
     private double height;
-    @Column(name = "LIFE_EXPECTANCY", nullable = false)
+
     private int lifeExpectancy;
 
     //Acces methods
