@@ -1,0 +1,2 @@
+com/app/doggi/DoggiApplicationTests.java
+ com.app.doggi.DoggiApplicationTests
