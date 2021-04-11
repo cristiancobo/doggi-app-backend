@@ -1,11 +1,9 @@
-package com.app.doggi.stdin;
+package com.app.doggi.dtos.stdout;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
-public class DogBreedStdInDto {
-
+public class DogBreedStdOutDto {
     //Atrtibutes
+
+    private Long id;
 
     private String name;
 
@@ -16,6 +14,14 @@ public class DogBreedStdInDto {
     private int lifeExpectancy;
 
     //Acces methods
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

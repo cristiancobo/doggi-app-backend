@@ -1,7 +1,7 @@
 package com.app.doggi.interfaces.mapper;
 
 import com.app.doggi.model.DogBreed;
-import com.app.doggi.stdin.DogBreedStdInDto;
+import com.app.doggi.dtos.stdin.DogBreedStdInDto;
 
 public interface IDogBreedService {
 
