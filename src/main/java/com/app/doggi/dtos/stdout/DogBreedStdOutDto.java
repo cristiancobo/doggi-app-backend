@@ -1,5 +1,10 @@
 package com.app.doggi.dtos.stdout;
 
+import com.app.doggi.model.Color;
+import com.app.doggi.model.Nature;
+
+import java.util.List;
+
 public class DogBreedStdOutDto {
     //Atrtibutes
 
@@ -12,6 +17,10 @@ public class DogBreedStdOutDto {
     private double height;
 
     private int lifeExpectancy;
+
+    private List<Color> dogBreedColors;
+
+    private List<Nature> dogBreedNatures;
 
     //Acces methods
 
@@ -53,5 +62,21 @@ public class DogBreedStdOutDto {
 
     public void setLifeExpectancy(int lifeExpectancy) {
         this.lifeExpectancy = lifeExpectancy;
+    }
+
+    public List<Color> getDogBreedColors() {
+        return dogBreedColors;
+    }
+
+    public void setDogBreedColors(List<Color> dogBreedColors) {
+        this.dogBreedColors = dogBreedColors;
+    }
+
+    public List<Nature> getDogBreedNatures() {
+        return dogBreedNatures;
+    }
+
+    public void setDogBreedNatures(List<Nature> dogBreedNatures) {
+        this.dogBreedNatures = dogBreedNatures;
     }
 }
