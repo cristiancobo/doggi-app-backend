@@ -14,9 +14,10 @@ import java.util.List;
  */
 @Service
 public interface IDogBreedService {
-    public DogBreed save(DogBreedStdInDto dogBreedStdInDto);
-    public DogBreed update(Long id, DogBreedStdInDto dogBreedStdInDto);
-    public DogBreed delete(Long id);
-    public DogBreed findById(Long id);
+    public DogBreedStdOutDto save(DogBreedStdInDto dogBreedStdInDto);
+    public DogBreedStdOutDto update(Long id, DogBreedStdInDto dogBreedStdInDto);
+    public DogBreedStdOutDto delete(Long id);
+    public DogBreedStdOutDto findById(Long id);
+
     public List<DogBreedStdOutDto> findAll();
 }

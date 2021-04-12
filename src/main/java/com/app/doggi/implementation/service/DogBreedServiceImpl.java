@@ -25,23 +25,34 @@ public class DogBreedServiceImpl implements IDogBreedService {
         this.iDogBreedRepository = iDogBreedRepository;
     }
 
+    /**
+     * Method that save a new dog breed in the application
+     * @param dogBreedStdInDto
+     * @return
+     */
     @Override
-    public DogBreed save(DogBreedStdInDto dogBreedStdInDto) {
+    public DogBreedStdOutDto save(DogBreedStdInDto dogBreedStdInDto) {
+        DogBreed dogBreed = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdInDtoToDogBreed(dogBreedStdInDto);
+        dogBreed.setColors(dogBreedStdInDto.getDogBreedColors());
+        dogBreed.setNatures(dogBreedStdInDto.getDogBreedNatures());
+        DogBreedStdOutDto dogBreedStdOutDto = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdOutDto(dogBreed);
+        dogBreedStdOutDto.setDogBreedColors(dogBreed.getColors());
+        dogBreedStdOutDto.setDogBreedNatures(dogBreed.getNatures());
+        return dogBreedStdOutDto;
+    }
+
+    @Override
+    public DogBreedStdOutDto update(Long id, DogBreedStdInDto dogBreedStdInDto) {
         return null;
     }
 
     @Override
-    public DogBreed update(Long id, DogBreedStdInDto dogBreedStdInDto) {
+    public DogBreedStdOutDto delete(Long id) {
         return null;
     }
 
     @Override
-    public DogBreed delete(Long id) {
-        return null;
-    }
-
-    @Override
-    public DogBreed findById(Long id) {
+    public DogBreedStdOutDto findById(Long id) {
         return null;
     }
 
