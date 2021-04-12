@@ -16,6 +16,7 @@ public class DogBreed {
     //Atrtibutes
     @Id
     @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     private Long id;
     @Column(name = "NAME", nullable = false)
     private String name;
