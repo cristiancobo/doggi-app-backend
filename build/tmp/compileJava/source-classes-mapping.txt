@@ -1,14 +1,18 @@
-com/app/doggi/stdin/DogBreedStdInDto.java
- com.app.doggi.stdin.DogBreedStdInDto
+com/app/doggi/interfaces/mapper/IDogBreedService.java
+ com.app.doggi.interfaces.mapper.IDogBreedService
 com/app/doggi/model/Nature.java
  com.app.doggi.model.Nature
-com/app/doggi/stdout/DogBreedStdOutDto.java
- com.app.doggi.stdout.DogBreedStdOutDto
+com/app/doggi/dtos/stdout/DogBreedStdOutDto.java
+ com.app.doggi.dtos.stdout.DogBreedStdOutDto
 com/app/doggi/interfaces/mapper/IDogBreedMapper.java
  com.app.doggi.interfaces.mapper.IDogBreedMapper
+com/app/doggi/dtos/stdin/DogBreedStdInDto.java
+ com.app.doggi.dtos.stdin.DogBreedStdInDto
 com/app/doggi/model/Color.java
  com.app.doggi.model.Color
 com/app/doggi/DoggiApplication.java
  com.app.doggi.DoggiApplication
+com/app/doggi/repository/IDogBreedRepository.java
+ com.app.doggi.repository.IDogBreedRepository
 com/app/doggi/model/DogBreed.java
  com.app.doggi.model.DogBreed
