@@ -5,11 +5,11 @@ package com.app.doggi.utils.exceptions;
  * @version 1.0
  *
  */
-public class DodBreedDoesNotExistException extends RuntimeException {
+public class DogBreedDoesNotExistException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
 
-    public DodBreedDoesNotExistException(String message){
+    public DogBreedDoesNotExistException(String message){
         super(message);
     }
 }
