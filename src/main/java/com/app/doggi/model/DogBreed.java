@@ -1,9 +1,8 @@
 package com.app.doggi.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -26,6 +25,22 @@ public class DogBreed {
     private double height;
     @Column(name = "LIFE_EXPECTANCY", nullable = false)
     private int lifeExpectancy;
+
+    @JoinTable(
+            name = "DOGBREED_COLOR",
+            joinColumns = @JoinColumn(name = "FK_DOG_BREED", nullable = false),
+            inverseJoinColumns = @JoinColumn(name="FK_COLOR", nullable = false)
+    )
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Color> colors;
+
+    @JoinTable(
+            name = "DOGBREED_NATURE",
+            joinColumns = @JoinColumn(name = "FK_DOG_BREED", nullable = false),
+            inverseJoinColumns = @JoinColumn(name="FK_NATURE", nullable = false)
+    )
+    @ManyToMany(cascade = CascadeType.ALL)
+    private List<Nature> natures;
 
     //Acces methods
 
@@ -67,5 +82,27 @@ public class DogBreed {
 
     public void setLifeExpectancy(int lifeExpectancy) {
         this.lifeExpectancy = lifeExpectancy;
+    }
+
+    /**
+     * Method to add a new color to dog breed
+     * @param color
+     */
+    public void addColor(Color color){
+        if(this.colors == null){
+            this.colors = new ArrayList<>();
+        }
+        this.colors.add(color);
+    }
+
+    /**
+     * Method to add a new nature to dog breed
+     * @param nature
+     */
+    public void addNature(Nature nature){
+        if(this.natures == null){
+            this.natures= new ArrayList<>();
+        }
+        this.natures.add(nature);
     }
 }
