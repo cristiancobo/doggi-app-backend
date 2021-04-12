@@ -1,4 +1,4 @@
-package com.app.doggi.interfaces.service;
+package com.app.doggi.interfaces.mapper;
 
 import com.app.doggi.dtos.stdin.DogBreedStdInDto;
 import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
