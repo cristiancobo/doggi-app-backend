@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 com/app/doggi/model/Nature.java
  com.app.doggi.model.Nature
 com/app/doggi/interfaces/service/IDogBreedService.java
  com.app.doggi.interfaces.service.IDogBreedService
+=======
+com/app/doggi/interfaces/mapper/IDogBreedService.java
+ com.app.doggi.interfaces.mapper.IDogBreedService
+com/app/doggi/model/Nature.java
+ com.app.doggi.model.Nature
+>>>>>>> main
 com/app/doggi/dtos/stdout/DogBreedStdOutDto.java
  com.app.doggi.dtos.stdout.DogBreedStdOutDto
 com/app/doggi/interfaces/mapper/IDogBreedMapper.java
