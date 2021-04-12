@@ -16,13 +16,15 @@ com/app/doggi/repository/IDogBreedRepository.java
  com.app.doggi.repository.IDogBreedRepository
 com/app/doggi/interfaces/service/IDogBreedService.java
  com.app.doggi.interfaces.service.IDogBreedService
-com/app/doggi/implementation/service/DogBreedServiceImpl.java
- com.app.doggi.implementation.service.DogBreedServiceImpl
+com/app/doggi/model/DogBreed.java
+ com.app.doggi.model.DogBreed
 com/app/doggi/dtos/stdout/DogBreedStdOutDto.java
  com.app.doggi.dtos.stdout.DogBreedStdOutDto
 com/app/doggi/interfaces/mapper/IDogBreedMapper.java
  com.app.doggi.interfaces.mapper.IDogBreedMapper
 com/app/doggi/dtos/stdin/DogBreedStdInDto.java
  com.app.doggi.dtos.stdin.DogBreedStdInDto
-com/app/doggi/model/DogBreed.java
- com.app.doggi.model.DogBreed
+com/app/doggi/implementation/service/DogBreedServiceImpl.java
+ com.app.doggi.implementation.service.DogBreedServiceImpl
+com/app/doggi/restcontroller/DogBreedRestController.java
+ com.app.doggi.restcontroller.DogBreedRestController
