@@ -1,10 +1,6 @@
-package com.app.doggi.stdin;
+package com.app.doggi.dtos.stdout;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
-public class DogBreedStdInDto {
-
+public class DogBreedStdOutDto {
     //Atrtibutes
 
     private Long id;
