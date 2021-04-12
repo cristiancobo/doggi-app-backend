@@ -1,12 +1,12 @@
-package com.app.doggi.interfaces.mapper;
+package com.app.doggi.interfaces.service;
+
 
 import com.app.doggi.model.DogBreed;
-import com.app.doggi.dtos.stdin.DogBreedStdInDto;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface IDogBreedService {
 
-    public DogBreed save(DogBreedStdInDto dogBreedStdInDto);
-    public DogBreed update(Long id, DogBreedStdInDto dogBreedStdInDto);
-    public DogBreed delete(Long id);
-    public DogBreed findById(Long id);
+    public DogBreed save(Dog)
+
 }
