@@ -1,9 +1,12 @@
 package com.app.doggi.implementation.service;
 
 import com.app.doggi.dtos.stdin.DogBreedStdInDto;
+import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
 import com.app.doggi.interfaces.service.IDogBreedService;
 import com.app.doggi.model.DogBreed;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Class representing dog breed service implementation.
@@ -29,6 +32,11 @@ public class DogBreedServiceImpl implements IDogBreedService {
 
     @Override
     public DogBreed findById(Long id) {
+        return null;
+    }
+
+    @Override
+    public List<DogBreedStdOutDto> findAll() {
         return null;
     }
 }
