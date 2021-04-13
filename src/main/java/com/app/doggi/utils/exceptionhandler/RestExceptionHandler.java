@@ -105,4 +105,66 @@ public class RestExceptionHandler  extends ResponseEntityExceptionHandler {
         HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
         return buildResponseEntity(httpStatus, exception);
     }
+
+    /**
+     * Method that build a response when try to save a dog breed with colors = null
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedColorsMandatoryException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
+
+    /**
+     *Method that build a response when try to save a dog breed with height = null
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedHeightMandatoryException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
+    /**
+     *Method that build a response when try to save a dog breed with life expectancy = null
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedLifeExpectancyMandatoryException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
+    /**
+     *Method that build a response when try to save a dog breed with name = null
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedNameMandatoryException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
+    /**
+     *Method that build a response when try to save a dog breed with natures = null
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedNaturesMandatoryException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
+    /**
+     *Method that build a response when try to save a dog breed with weight = null
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedWeightMandatoryException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
 }

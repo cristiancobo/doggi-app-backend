@@ -46,7 +46,6 @@ public class DogBreedServiceImpl implements IDogBreedService {
     public DogBreedStdOutDto save(DogBreedStdInDto dogBreedStdInDto) {
         DogBreed dogBreed = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdInDtoToDogBreed(dogBreedStdInDto);
 
-
         if(!(dogBreedStdInDto.getDogBreedColors().size() > 0)){
             throw new DogBreedDoesNotHaveColorException("Dog breed must have at least one nested color");
         }else{
