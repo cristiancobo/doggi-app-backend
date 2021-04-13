@@ -5,9 +5,9 @@ package com.app.doggi.utils.exceptions;
  * @version 1.0
  *
  */
-public class NatureDoesNotExist  extends RuntimeException{
+public class ColorDoesNotExistException extends RuntimeException{
 
-    public NatureDoesNotExist(String message){
+    public ColorDoesNotExistException(String message){
         super(message);
     }
 }

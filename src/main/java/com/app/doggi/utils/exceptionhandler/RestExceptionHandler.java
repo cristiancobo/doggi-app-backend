@@ -1,9 +1,9 @@
 package com.app.doggi.utils.exceptionhandler;
 
-import com.app.doggi.utils.exceptions.ColorDoesNotExist;
+import com.app.doggi.utils.exceptions.ColorDoesNotExistException;
 import com.app.doggi.utils.exceptions.DogBreedDoesNotExistException;
 import com.app.doggi.utils.exceptions.InvalidDataException;
-import com.app.doggi.utils.exceptions.NatureDoesNotExist;
+import com.app.doggi.utils.exceptions.NatureDoesNotExistException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -73,7 +73,7 @@ public class RestExceptionHandler  extends ResponseEntityExceptionHandler {
      * @return
      */
     @ExceptionHandler
-    protected ResponseEntity<ErrorResponse> handleException(ColorDoesNotExist exception){
+    protected ResponseEntity<ErrorResponse> handleException(ColorDoesNotExistException exception){
         HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
         return buildResponseEntity(httpStatus, exception);
     }
@@ -84,7 +84,7 @@ public class RestExceptionHandler  extends ResponseEntityExceptionHandler {
      * @return
      */
     @ExceptionHandler
-    protected ResponseEntity<ErrorResponse> handleException(NatureDoesNotExist exception){
+    protected ResponseEntity<ErrorResponse> handleException(NatureDoesNotExistException exception){
         HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
         return buildResponseEntity(httpStatus, exception);
     }
