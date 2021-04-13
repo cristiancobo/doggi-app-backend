@@ -1,21 +1,30 @@
 package com.app.doggi.dtos.stdin;
 
 
-import com.app.doggi.model.Color;
-import com.app.doggi.model.Nature;
-
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 public class DogBreedStdInDto {
 
     //Atrtibutes
 
+    @Size(max = 45, min=3, message="The name must be between 3 and 45 characters.")
+    @Pattern(regexp = "[a-zA-z]+", message="The name can only have characters of the alphabet.")
     private String name;
 
+    @Min(value = 1 ,message = "The weight must be greater than 1 kg." )
+    @Max(value = 200 ,message = "The weight must not be greater than 200 kg." )
     private Double weight;
 
+    @Min(value = 30 ,message = "The height must be greater than 30 cms." )
+    @Max(value = 200 ,message = "The height must not be greater than 200 cms." )
     private Double height;
 
+    @Min(value = 1 ,message = "The life expectancy must be greater than 1 year." )
+    @Max(value = 100 ,message = "The weight must not be greater than 100 years" )
     private Integer lifeExpectancy;
 
     private List<Long> dogBreedColors;
