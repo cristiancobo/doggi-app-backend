@@ -12,11 +12,11 @@ public class DogBreedStdInDto {
 
     private String name;
 
-    private double weight;
+    private Double weight;
 
-    private double height;
+    private Double height;
 
-    private int lifeExpectancy;
+    private Integer lifeExpectancy;
 
     private List<Long> dogBreedColors;
 
@@ -53,24 +53,27 @@ public class DogBreedStdInDto {
         this.name = name;
     }
 
-    public double getWeight() {
+    public Double getWeight() {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(Double weight) {
         this.weight = weight;
     }
 
-    public double getHeight() {
+    public Double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(Double height) {
         this.height = height;
     }
 
-    public int getLifeExpectancy() {
+    public Integer getLifeExpectancy() {
         return lifeExpectancy;
     }
 
+    public void setLifeExpectancy(Integer lifeExpectancy) {
+        this.lifeExpectancy = lifeExpectancy;
+    }
 }
