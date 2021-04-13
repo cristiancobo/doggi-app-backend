@@ -1,9 +1,6 @@
 package com.app.doggi.utils.exceptionhandler;
 
-import com.app.doggi.utils.exceptions.ColorDoesNotExistException;
-import com.app.doggi.utils.exceptions.DogBreedDoesNotExistException;
-import com.app.doggi.utils.exceptions.InvalidDataException;
-import com.app.doggi.utils.exceptions.NatureDoesNotExistException;
+import com.app.doggi.utils.exceptions.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -85,6 +82,26 @@ public class RestExceptionHandler  extends ResponseEntityExceptionHandler {
      */
     @ExceptionHandler
     protected ResponseEntity<ErrorResponse> handleException(NatureDoesNotExistException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
+    /**
+     * Method that build a response when a dog breed does not have a nature nested
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedDoesNotHaveNatureException exception){
+        HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
+        return buildResponseEntity(httpStatus, exception);
+    }
+    /**
+     * Method that build a response when a dog breed does not have a nature nested
+     * @param exception
+     * @return
+     */
+    @ExceptionHandler
+    protected ResponseEntity<ErrorResponse> handleException(DogBreedDoesNotHaveColorException exception){
         HttpStatus httpStatus = HttpStatus.BAD_REQUEST;
         return buildResponseEntity(httpStatus, exception);
     }
