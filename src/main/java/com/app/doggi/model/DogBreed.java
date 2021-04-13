@@ -1,6 +1,7 @@
 package com.app.doggi.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +18,7 @@ public class DogBreed {
     @Column(name = "ID", nullable = false)
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "NAME", nullable = false, length = 45)
     private String name;
     @Column(name = "WEIGHT", nullable = false)
     private double weight;
