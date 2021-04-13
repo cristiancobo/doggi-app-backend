@@ -1,9 +1,9 @@
 package com.app.doggi.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Min;
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * Class representing a canine breed.
@@ -16,8 +16,9 @@ public class DogBreed {
     //Atrtibutes
     @Id
     @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    @Column(name = "NAME", nullable = false)
+    @Column(name = "NAME", nullable = false, length = 45)
     private String name;
     @Column(name = "WEIGHT", nullable = false)
     private double weight;
@@ -25,6 +26,8 @@ public class DogBreed {
     private double height;
     @Column(name = "LIFE_EXPECTANCY", nullable = false)
     private int lifeExpectancy;
+
+
 
     @JoinTable(
             name = "DOGBREED_COLOR",
@@ -82,6 +85,22 @@ public class DogBreed {
 
     public void setLifeExpectancy(int lifeExpectancy) {
         this.lifeExpectancy = lifeExpectancy;
+    }
+
+    public List<Color> getColors() {
+        return colors;
+    }
+
+    public void setColors(List<Color> colors) {
+        this.colors = colors;
+    }
+
+    public List<Nature> getNatures() {
+        return natures;
+    }
+
+    public void setNatures(List<Nature> natures) {
+        this.natures = natures;
     }
 
     /**
