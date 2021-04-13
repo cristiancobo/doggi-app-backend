@@ -15,7 +15,7 @@ public class DogBreed {
     //Atrtibutes
     @Id
     @Column(name = "ID", nullable = false)
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     @Column(name = "NAME", nullable = false)
     private String name;

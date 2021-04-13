@@ -1,9 +1,6 @@
 package com.app.doggi.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Class representing a dog's color
@@ -15,6 +12,7 @@ public class Color {
     //Attributes
     @Id
     @Column(name = "ID", nullable = false)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     @Column(name = "NAME", nullable = false)

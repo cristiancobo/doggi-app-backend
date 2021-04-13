@@ -18,12 +18,32 @@ public class DogBreedStdInDto {
 
     private int lifeExpectancy;
 
-    private List<Color> dogBreedColors;
+    private List<Long> dogBreedColors;
 
-    private List<Nature> dogBreedNatures;
+    private List<Long> dogBreedNatures;
 
 
     //Access methods
+
+    public void setLifeExpectancy(int lifeExpectancy) {
+        this.lifeExpectancy = lifeExpectancy;
+    }
+
+    public List<Long> getDogBreedColors() {
+        return dogBreedColors;
+    }
+
+    public void setDogBreedColors(List<Long> dogBreedColors) {
+        this.dogBreedColors = dogBreedColors;
+    }
+
+    public List<Long> getDogBreedNatures() {
+        return dogBreedNatures;
+    }
+
+    public void setDogBreedNatures(List<Long> dogBreedNatures) {
+        this.dogBreedNatures = dogBreedNatures;
+    }
 
     public String getName() {
         return name;
@@ -53,23 +73,4 @@ public class DogBreedStdInDto {
         return lifeExpectancy;
     }
 
-    public void setLifeExpectancy(int lifeExpectancy) {
-        this.lifeExpectancy = lifeExpectancy;
-    }
-
-    public List<Color> getDogBreedColors() {
-        return dogBreedColors;
-    }
-
-    public void setDogBreedColors(List<Color> dogBreedColors) {
-        this.dogBreedColors = dogBreedColors;
-    }
-
-    public List<Nature> getDogBreedNatures() {
-        return dogBreedNatures;
-    }
-
-    public void setDogBreedNatures(List<Nature> dogBreedNatures) {
-        this.dogBreedNatures = dogBreedNatures;
-    }
 }

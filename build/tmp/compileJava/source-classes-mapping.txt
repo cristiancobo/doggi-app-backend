@@ -1,11 +1,11 @@
-com/app/doggi/model/Nature.java
- com.app.doggi.model.Nature
+com/app/doggi/model/Color.java
+ com.app.doggi.model.Color
 com/app/doggi/utils/exceptions/DogBreedDoesNotExistException.java
  com.app.doggi.utils.exceptions.DogBreedDoesNotExistException
 com/app/doggi/utils/exceptionhandler/RestExceptionHandler.java
  com.app.doggi.utils.exceptionhandler.RestExceptionHandler
-com/app/doggi/model/Color.java
- com.app.doggi.model.Color
+com/app/doggi/dtos/stdout/DogBreedStdOutDto.java
+ com.app.doggi.dtos.stdout.DogBreedStdOutDto
 com/app/doggi/DoggiApplication.java
  com.app.doggi.DoggiApplication
 com/app/doggi/utils/exceptions/InvalidDataException.java
@@ -14,17 +14,21 @@ com/app/doggi/utils/exceptionhandler/ErrorResponse.java
  com.app.doggi.utils.exceptionhandler.ErrorResponse
 com/app/doggi/repository/IDogBreedRepository.java
  com.app.doggi.repository.IDogBreedRepository
-com/app/doggi/interfaces/service/IDogBreedService.java
- com.app.doggi.interfaces.service.IDogBreedService
 com/app/doggi/model/DogBreed.java
  com.app.doggi.model.DogBreed
-com/app/doggi/dtos/stdout/DogBreedStdOutDto.java
- com.app.doggi.dtos.stdout.DogBreedStdOutDto
+com/app/doggi/model/Nature.java
+ com.app.doggi.model.Nature
+com/app/doggi/interfaces/service/IDogBreedService.java
+ com.app.doggi.interfaces.service.IDogBreedService
+com/app/doggi/implementation/service/DogBreedServiceImpl.java
+ com.app.doggi.implementation.service.DogBreedServiceImpl
 com/app/doggi/interfaces/mapper/IDogBreedMapper.java
  com.app.doggi.interfaces.mapper.IDogBreedMapper
 com/app/doggi/dtos/stdin/DogBreedStdInDto.java
  com.app.doggi.dtos.stdin.DogBreedStdInDto
-com/app/doggi/implementation/service/DogBreedServiceImpl.java
- com.app.doggi.implementation.service.DogBreedServiceImpl
 com/app/doggi/restcontroller/DogBreedRestController.java
  com.app.doggi.restcontroller.DogBreedRestController
+com/app/doggi/repository/INatureRepository.java
+ com.app.doggi.repository.INatureRepository
+com/app/doggi/repository/IColorRespository.java
+ com.app.doggi.repository.IColorRespository
