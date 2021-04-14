@@ -125,6 +125,7 @@ public class DogBreedServiceImpl implements IDogBreedService {
         }
         DogBreed dogBreed = iDogBreedRepository.findById(id).get();
         DogBreedStdOutDto dogBreedStdOutDto = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdOutDto(dogBreed);
+
         for (Color color : dogBreed.getColors()) {
                 dogBreedStdOutDto.addColor(color);
         }
@@ -134,8 +135,18 @@ public class DogBreedServiceImpl implements IDogBreedService {
         return dogBreedStdOutDto;
     }
 
+    /**
+     * Method that find all dog breeds
+     * @return
+     */
     @Override
     public List<DogBreedStdOutDto> findAll() {
-        return null;
+        List<DogBreed> dogBreeds = (List<DogBreed>) iDogBreedRepository.findAll();
+        List<DogBreedStdOutDto> dogBreedStdOutDtos = IDogBreedMapperImpl.INTANCE.asListDogBreedEntitiesToListDogBreedStdInDto(dogBreeds);
+        for (int i = 0; i< dogBreeds.size(); i++){
+            dogBreedStdOutDtos.get(i).setDogBreedColors(dogBreeds.get(i).getColors());
+            dogBreedStdOutDtos.get(i).setDogBreedNatures(dogBreeds.get(i).getNatures());
+        }
+        return dogBreedStdOutDtos;
     }
 }

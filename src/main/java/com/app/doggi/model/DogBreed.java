@@ -30,8 +30,6 @@ public class DogBreed {
     @Column(name = "LIFE_EXPECTANCY", nullable = false)
     private int lifeExpectancy;
 
-
-
     @JoinTable(
             name = "DOGBREED_COLOR",
             joinColumns = @JoinColumn(name = "FK_DOG_BREED", nullable = false),
