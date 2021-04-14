@@ -12,7 +12,7 @@ public class DogBreedStdInDto {
     //Atrtibutes
 
     @Size(max = 45, min=3, message="The name must be between 3 and 45 characters.")
-    @Pattern(regexp = "[a-zA-z]+", message="The name can only have characters of the alphabet.")
+    @Pattern(regexp = ".*", message="The name can only have characters of the alphabet.")
     private String name;
 
     @Min(value = 1 ,message = "The weight must be greater than 1 kg." )

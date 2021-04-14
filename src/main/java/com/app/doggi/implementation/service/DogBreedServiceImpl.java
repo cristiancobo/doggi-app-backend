@@ -99,6 +99,8 @@ public class DogBreedServiceImpl implements IDogBreedService {
         return dogBreedStdOutDto;
     }
 
+
+
     @Override
     public DogBreedStdOutDto update(Long id, DogBreedStdInDto dogBreedStdInDto) {
         return null;
@@ -106,12 +108,30 @@ public class DogBreedServiceImpl implements IDogBreedService {
 
     @Override
     public DogBreedStdOutDto delete(Long id) {
+
+
         return null;
     }
 
+    /**
+     * Method that find a dog breed by id
+     * @param id
+     * @return
+     */
     @Override
     public DogBreedStdOutDto findById(Long id) {
-        return null;
+        if(!iDogBreedRepository.existsById(id)){
+           throw new DogBreedDoesNotExistException("Dog breed with id "+ id +" does not exist");
+        }
+        DogBreed dogBreed = iDogBreedRepository.findById(id).get();
+        DogBreedStdOutDto dogBreedStdOutDto = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdOutDto(dogBreed);
+        for (Color color : dogBreed.getColors()) {
+                dogBreedStdOutDto.addColor(color);
+        }
+        for (Nature nature : dogBreed.getNatures()) {
+            dogBreedStdOutDto.addNature(nature);
+        }
+        return dogBreedStdOutDto;
     }
 
     @Override

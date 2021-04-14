@@ -1,5 +1,8 @@
 package com.app.doggi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import java.util.ArrayList;
@@ -16,7 +19,7 @@ public class DogBreed {
     //Atrtibutes
     @Id
     @Column(name = "ID", nullable = false)
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     @Column(name = "NAME", nullable = false, length = 45)
     private String name;
@@ -34,6 +37,7 @@ public class DogBreed {
             joinColumns = @JoinColumn(name = "FK_DOG_BREED", nullable = false),
             inverseJoinColumns = @JoinColumn(name="FK_COLOR", nullable = false)
     )
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Color> colors;
 
@@ -42,10 +46,11 @@ public class DogBreed {
             joinColumns = @JoinColumn(name = "FK_DOG_BREED", nullable = false),
             inverseJoinColumns = @JoinColumn(name="FK_NATURE", nullable = false)
     )
+    @JsonIgnore
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Nature> natures;
 
-    //Acces methods
+    //Access methods
 
     public Long getId() {
         return id;
