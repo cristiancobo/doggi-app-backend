@@ -28,8 +28,8 @@ com/app/doggi/utils/exceptions/DogBreedNaturesMandatoryException.java
  com.app.doggi.utils.exceptions.DogBreedNaturesMandatoryException
 com/app/doggi/utils/exceptions/DogBreedLifeExpectancyMandatoryException.java
  com.app.doggi.utils.exceptions.DogBreedLifeExpectancyMandatoryException
-com/app/doggi/restcontroller/DogBreedRestController.java
- com.app.doggi.restcontroller.DogBreedRestController
+com/app/doggi/implementation/service/DogBreedServiceImpl.java
+ com.app.doggi.implementation.service.DogBreedServiceImpl
 com/app/doggi/model/Color.java
  com.app.doggi.model.Color
 com/app/doggi/utils/exceptions/ColorDoesNotExistException.java
@@ -50,5 +50,5 @@ com/app/doggi/repository/INatureRepository.java
  com.app.doggi.repository.INatureRepository
 com/app/doggi/DoggiApplication.java
  com.app.doggi.DoggiApplication
-com/app/doggi/implementation/service/DogBreedServiceImpl.java
- com.app.doggi.implementation.service.DogBreedServiceImpl
+com/app/doggi/restcontroller/DogBreedRestController.java
+ com.app.doggi.restcontroller.DogBreedRestController

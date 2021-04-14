@@ -47,6 +47,12 @@ public class DogBreedRestController {
         return new ResponseEntity<List<DogBreedStdOutDto>>(dogBreedStdOutDtos, HttpStatus.OK);
 
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<DogBreedStdOutDto> deleteDogBreedById(@PathVariable Long id){
+        DogBreedStdOutDto dogBreedStdOutDto = iDogBreedService.delete(id);
+        return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto,HttpStatus.OK);
+
+    }
 
 
 }
