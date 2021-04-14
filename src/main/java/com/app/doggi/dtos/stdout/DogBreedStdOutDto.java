@@ -3,6 +3,7 @@ package com.app.doggi.dtos.stdout;
 import com.app.doggi.model.Color;
 import com.app.doggi.model.Nature;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DogBreedStdOutDto {
@@ -68,5 +69,19 @@ public class DogBreedStdOutDto {
 
     public void setDogBreedNatures(List<Nature> dogBreedNatures) {
         this.dogBreedNatures = dogBreedNatures;
+    }
+
+    public void addColor(Color color){
+        if(this.dogBreedColors == null){
+            this.dogBreedColors = new ArrayList<>();
+        }
+        this.dogBreedColors.add(color);
+    }
+
+    public void addNature(Nature nature){
+        if(this.dogBreedNatures == null){
+            this.dogBreedNatures = new ArrayList<>();
+        }
+        this.dogBreedNatures.add(nature);
     }
 }
