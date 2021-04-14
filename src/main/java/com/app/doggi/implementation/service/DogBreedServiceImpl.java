@@ -106,11 +106,32 @@ public class DogBreedServiceImpl implements IDogBreedService {
         return null;
     }
 
+    /**
+     * Delete a dog breed by id
+     * @param id
+     * @return
+     */
     @Override
     public DogBreedStdOutDto delete(Long id) {
-
-
-        return null;
+        if(!iDogBreedRepository.existsById(id)){
+            throw new DogBreedDoesNotExistException("Dog breed with id "+ id + " doesn not exist");
+        }
+        DogBreed dogBreed = iDogBreedRepository.findById(id).get();
+        DogBreedStdOutDto dogBreedStdOutDto = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdOutDto(dogBreed);
+        if(dogBreed.getColors().size() > 0){
+            for (int i = 0; i< dogBreed.getColors().size(); i++){
+                dogBreedStdOutDto.addColor(dogBreed.getColors().get(i));
+                dogBreed.getColors().remove(i);
+            }
+        }
+       if (dogBreed.getNatures().size()>0){
+           for (int i = 0; i< dogBreed.getNatures().size(); i++){
+               dogBreedStdOutDto.addNature(dogBreed.getNatures().get(i));
+               dogBreed.getNatures().remove(i);
+           }
+       }
+        iDogBreedRepository.deleteById(id);
+        return dogBreedStdOutDto;
     }
 
     /**
