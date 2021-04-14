@@ -53,6 +53,15 @@ public class DogBreedRestController {
         return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto,HttpStatus.OK);
 
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<DogBreedStdOutDto> updateDogBreedById(@PathVariable Long id, @Valid @RequestBody DogBreedStdInDto dogBreedStdInDto, BindingResult bindingResult){
+        if(bindingResult.hasErrors()) {
+            throw new InvalidDataException(bindingResult);
+        }
+        DogBreedStdOutDto dogBreedStdOutDto = iDogBreedService.update(id, dogBreedStdInDto);
+        return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto,HttpStatus.OK);
+
+    }
 
 
 }
