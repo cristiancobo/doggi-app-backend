@@ -11,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  * Class representing a dog breed's controller
@@ -39,6 +40,12 @@ public class DogBreedRestController {
     public ResponseEntity<DogBreedStdOutDto> findByIdDogBreed(@PathVariable Long id){
         DogBreedStdOutDto dogBreedStdOutDto = iDogBreedService.findById(id);
         return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto,HttpStatus.OK);
+    }
+    @GetMapping("/")
+    public ResponseEntity<List<DogBreedStdOutDto>> findAllDogBreeds(){
+        List<DogBreedStdOutDto> dogBreedStdOutDtos = iDogBreedService.findAll();
+        return new ResponseEntity<List<DogBreedStdOutDto>>(dogBreedStdOutDtos, HttpStatus.OK);
+
     }
 
 
