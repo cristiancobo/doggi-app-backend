@@ -1,6 +1,6 @@
-package com.app.doggi.dtos.stdin;
+package com.app.doggi.dtos.stdout;
 
-public class NatureStdInDto {
+public class NatureStdOutDto {
 
     //Attributes
     private Long id;
