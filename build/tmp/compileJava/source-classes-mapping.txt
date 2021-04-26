@@ -70,3 +70,9 @@ com/app/doggi/implementation/service/ColorServiceImpl.java
  com.app.doggi.implementation.service.ColorServiceImpl
 com/app/doggi/interfaces/mapper/INatureMapper.java
  com.app.doggi.interfaces.mapper.INatureMapper
+com/app/doggi/implementation/service/NatureServiceImpl.java
+ com.app.doggi.implementation.service.NatureServiceImpl
+com/app/doggi/restcontroller/ColorRestController.java
+ com.app.doggi.restcontroller.ColorRestController
+com/app/doggi/restcontroller/NatureRestController.java
+ com.app.doggi.restcontroller.NatureRestController

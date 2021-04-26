@@ -17,7 +17,7 @@ import java.util.List;
  * @version 1.0
  */
 @RestController
-@RequestMapping("/api/v1.0/Natures")
+@RequestMapping("/api/v1.0/natures")
 public class NatureRestController {
 
     private INatureService iNatureService;
