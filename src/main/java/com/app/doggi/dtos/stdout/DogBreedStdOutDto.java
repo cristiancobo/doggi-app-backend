@@ -9,6 +9,10 @@ import java.util.List;
 public class DogBreedStdOutDto {
     //Atrtibutes
 
+
+
+    private Long id;
+
     private String name;
 
     private double weight;
@@ -83,5 +87,13 @@ public class DogBreedStdOutDto {
             this.dogBreedNatures = new ArrayList<>();
         }
         this.dogBreedNatures.add(nature);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
