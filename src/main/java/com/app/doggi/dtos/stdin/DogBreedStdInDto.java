@@ -27,12 +27,32 @@ public class DogBreedStdInDto {
     @Max(value = 100 ,message = "The weight must not be greater than 100 years" )
     private Integer lifeExpectancy;
 
+
+    private String country;
+
+    private Long idCountry;
+
     private List<Long> dogBreedColors;
 
     private List<Long> dogBreedNatures;
 
 
     //Access methods
+
+    public Long getIdCountry() {
+        return idCountry;
+    }
+
+    public void setIdCountry(Long idCountry) {
+        this.idCountry = idCountry;
+    }
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
     public void setLifeExpectancy(int lifeExpectancy) {
         this.lifeExpectancy = lifeExpectancy;
