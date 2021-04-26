@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Class representing colot service implementation.
+ * Class representing color service implementation.
  * @version 1.0
  */
 @Service
