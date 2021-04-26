@@ -9,8 +9,6 @@ import java.util.List;
 public class DogBreedStdOutDto {
     //Atrtibutes
 
-
-
     private Long id;
 
     private String name;
@@ -25,7 +23,17 @@ public class DogBreedStdOutDto {
 
     private List<Nature> dogBreedNatures;
 
-    //Acces methods
+    private String country;
+
+    //Access methods
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
     public String getName() {
         return name;

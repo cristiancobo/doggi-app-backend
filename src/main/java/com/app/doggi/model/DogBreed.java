@@ -29,6 +29,9 @@ public class DogBreed {
     private double height;
     @Column(name = "LIFE_EXPECTANCY", nullable = false)
     private int lifeExpectancy;
+    @Column(name = "COUNTRY_ORIGIN")
+    private String country;
+
 
     @JoinTable(
             name = "DOGBREED_COLOR",
@@ -49,6 +52,15 @@ public class DogBreed {
     private List<Nature> natures;
 
     //Access methods
+
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
     public Long getId() {
         return id;

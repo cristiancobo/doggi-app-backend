@@ -1,5 +1,7 @@
 package com.app.doggi.restcontroller;
 
+import com.app.doggi.DoggiApplication;
+import com.app.doggi.dtos.stdin.CountryStdInDto;
 import com.app.doggi.dtos.stdin.DogBreedStdInDto;
 import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
 import com.app.doggi.interfaces.service.IDogBreedService;
@@ -9,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -22,10 +25,12 @@ import java.util.List;
 public class DogBreedRestController {
 
     private IDogBreedService iDogBreedService;
+    private RestTemplate restTemplate;
 
     @Autowired
-    public DogBreedRestController(IDogBreedService iDogBreedService){
+    public DogBreedRestController(IDogBreedService iDogBreedService, RestTemplate restTemplate) {
         this.iDogBreedService = iDogBreedService;
+        this.restTemplate = restTemplate;
     }
 
     @PostMapping("/")
@@ -33,6 +38,10 @@ public class DogBreedRestController {
         if(bindingResult.hasErrors()) {
             throw new InvalidDataException(bindingResult);
         }
+        Long idCountry = dogBreedStdInDto.getIdCountry();
+        String url =  DoggiApplication.API_COUNTRIES_API_BASE_URL +idCountry;
+        String countryName =  restTemplate.getForObject(url,CountryStdInDto.class).getName();
+        dogBreedStdInDto.setCountry(countryName);
         DogBreedStdOutDto dogBreedStdOutDto = iDogBreedService.save(dogBreedStdInDto);
         return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto, HttpStatus.OK);
     }
