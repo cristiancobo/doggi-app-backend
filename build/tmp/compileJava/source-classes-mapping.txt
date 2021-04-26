@@ -54,3 +54,19 @@ com/app/doggi/DoggiApplication.java
  com.app.doggi.DoggiApplication
 com/app/doggi/repository/IColorRespository.java
  com.app.doggi.repository.IColorRespository
+com/app/doggi/dtos/stdout/ColorStdOutDto.java
+ com.app.doggi.dtos.stdout.ColorStdOutDto
+com/app/doggi/dtos/stdout/NatureStdOutDto.java
+ com.app.doggi.dtos.stdout.NatureStdOutDto
+com/app/doggi/dtos/stdin/NatureStdInDto.java
+ com.app.doggi.dtos.stdin.NatureStdInDto
+com/app/doggi/interfaces/service/INatureService.java
+ com.app.doggi.interfaces.service.INatureService
+com/app/doggi/interfaces/service/IColorService.java
+ com.app.doggi.interfaces.service.IColorService
+com/app/doggi/interfaces/mapper/IColorMapper.java
+ com.app.doggi.interfaces.mapper.IColorMapper
+com/app/doggi/implementation/service/ColorServiceImpl.java
+ com.app.doggi.implementation.service.ColorServiceImpl
+com/app/doggi/interfaces/mapper/INatureMapper.java
+ com.app.doggi.interfaces.mapper.INatureMapper
