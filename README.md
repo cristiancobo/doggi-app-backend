@@ -1,7 +1,7 @@
 # DOG BREEDS API  🐶
 In this repository you will find an api of dog breeds. The relational model was built as follows:
 
-![](/Users/christianandres/Documents/back-proyecto-final/doggi-app-backend/src/main/resources/static/DOG_BREE_API_MER.png)  
+![](./DOG_BREE_API_MER.png)  
 
 This project has an architecture based on microservices. It is important to say that this dog breed api consumes or communicates with an external service (api) called countries-api whose task is to find the country of origin of a specific breed. This api has different layers: 
 
