@@ -18,7 +18,7 @@ To run the project you can clone this repository and run the following commands 
 
 Finally access the browser or a tool to be able to make requests. This project has different endpoints.
 
-####EndPoints: dog breed 
+#### EndPoints: dog breed 
 
 --- 
 
@@ -42,7 +42,7 @@ http://localhost:8000/api/v1.0/dogbreeds/
 
 http://localhost:8000/api/v1.0/dogbreeds/ID 
 
-####EndPoints: dog breed colors
+#### EndPoints: dog breed colors
 
 --- 
 
@@ -54,7 +54,7 @@ http://localhost:8000/api/v1.0/colors/ID
 
 http://localhost:8000/api/v1.0/colors/ 
 
-####EndPoints: dog breed natures
+#### EndPoints: dog breed natures
 
 --- 
 
