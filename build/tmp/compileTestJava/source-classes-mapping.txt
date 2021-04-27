@@ -2,3 +2,5 @@ com/app/doggi/DoggiApplicationTests.java
  com.app.doggi.DoggiApplicationTests
 com/app/doggi/implementation/service/ColorServiceImplTest.java
  com.app.doggi.implementation.service.ColorServiceImplTest
+com/app/doggi/implementation/service/NatureServiceImplTest.java
+ com.app.doggi.implementation.service.NatureServiceImplTest
