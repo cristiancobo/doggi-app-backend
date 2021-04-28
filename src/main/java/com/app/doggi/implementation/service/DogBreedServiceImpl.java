@@ -76,7 +76,7 @@ public class    DogBreedServiceImpl implements IDogBreedService {
                 }
             }
         }
-        //Check if the colors attribute has at least one nature
+        //Check if the natures attribute has at least one nature
         if(!(dogBreedStdInDto.getDogBreedNatures().size()>0)){
             throw new DogBreedDoesNotHaveNatureException("Dog breed must have at least one nested nature");
         }else{
