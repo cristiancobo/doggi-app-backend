@@ -14,12 +14,14 @@ import com.app.doggi.utils.exceptions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Class representing dog breed service implementation.
  * @version 1.0
  */
+
 @Service
 public class    DogBreedServiceImpl implements IDogBreedService {
 
@@ -42,7 +44,6 @@ public class    DogBreedServiceImpl implements IDogBreedService {
     @Override
     public DogBreedStdOutDto save(DogBreedStdInDto dogBreedStdInDto) {
         DogBreed dogBreed = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdInDtoToDogBreed(dogBreedStdInDto);
-
         //Check if any attribute is null
         if(dogBreedStdInDto.getWeight() == null){
             throw new DogBreedWeightMandatoryException("Weight attribute is mandatory");
@@ -95,7 +96,8 @@ public class    DogBreedServiceImpl implements IDogBreedService {
         DogBreedStdOutDto dogBreedStdOutDto = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdOutDto(dogBreed);
         dogBreedStdOutDto.setDogBreedColors(dogBreed.getColors());
         dogBreedStdOutDto.setDogBreedNatures(dogBreed.getNatures());
-        iDogBreedRepository.save(dogBreed);
+        Long id = iDogBreedRepository.saveAndFlush(dogBreed).getId();
+        dogBreedStdOutDto.setId(id);
         return dogBreedStdOutDto;
     }
 
@@ -226,6 +228,7 @@ public class    DogBreedServiceImpl implements IDogBreedService {
      * Method that find all dog breeds
      * @return
      */
+    //
     @Override
     public List<DogBreedStdOutDto> findAll() {
         List<DogBreed> dogBreeds = (List<DogBreed>) iDogBreedRepository.findAll();
