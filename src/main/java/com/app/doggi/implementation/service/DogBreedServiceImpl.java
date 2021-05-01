@@ -95,7 +95,8 @@ public class    DogBreedServiceImpl implements IDogBreedService {
         DogBreedStdOutDto dogBreedStdOutDto = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdOutDto(dogBreed);
         dogBreedStdOutDto.setDogBreedColors(dogBreed.getColors());
         dogBreedStdOutDto.setDogBreedNatures(dogBreed.getNatures());
-        iDogBreedRepository.save(dogBreed);
+        Long id = iDogBreedRepository.saveAndFlush(dogBreed).getId();
+        dogBreedStdOutDto.setId(id);
         return dogBreedStdOutDto;
     }
 
