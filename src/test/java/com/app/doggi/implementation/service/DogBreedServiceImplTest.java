@@ -14,7 +14,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -255,14 +258,17 @@ class DogBreedServiceImplTest {
     }
 
     @Test
+
     public void whenUserSaveADogBreedSuccessfully(){
         when(iColorRespository.existsById(color.getId())).thenReturn(true);
         when(iNatureRepository.existsById(nature.getId())).thenReturn(true);
         when(iColorRespository.findById(color.getId())).thenReturn(java.util.Optional.ofNullable(color));
         when(iNatureRepository.findById(nature.getId())).thenReturn(java.util.Optional.ofNullable(nature));
+        when(iDogBreedRepository.saveAndFlush(Mockito.any(DogBreed.class))).thenReturn(dogBreed);
         DogBreedStdOutDto dogBreedStdOutDto = dogBreedService.save(dogBreedStdInDto1);
 
         Long actualIdDogBreed = dogBreedStdOutDto.getId();
+        Long expectedIdDogBreed = 1L;
         String expectedNameDogBreed = dogBreedStdOutDto.getName();
         String actualNameDogBreed = dogBreedStdOutDto.getName();
         Double expectedHeightDogBreed = dogBreedStdInDto1.getHeight();
@@ -276,7 +282,7 @@ class DogBreedServiceImplTest {
         int expectedColorsAmount = dogBreedStdInDto1.getDogBreedColors().size();
         int actualColorsAmount = dogBreedStdOutDto.getDogBreedColors().size();
 
-        assertNull(actualIdDogBreed);
+        assertEquals(expectedIdDogBreed, actualIdDogBreed);
         assertTrue(actualNameDogBreed.contains(expectedNameDogBreed));
         assertEquals(expectedHeightDogBreed,actualHeightDogBreed);
         assertEquals(expectedWeightDogBreed,actualWeightDogBreed);

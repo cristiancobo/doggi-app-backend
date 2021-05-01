@@ -14,12 +14,14 @@ import com.app.doggi.utils.exceptions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 /**
  * Class representing dog breed service implementation.
  * @version 1.0
  */
+
 @Service
 public class    DogBreedServiceImpl implements IDogBreedService {
 
@@ -42,7 +44,6 @@ public class    DogBreedServiceImpl implements IDogBreedService {
     @Override
     public DogBreedStdOutDto save(DogBreedStdInDto dogBreedStdInDto) {
         DogBreed dogBreed = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdInDtoToDogBreed(dogBreedStdInDto);
-
         //Check if any attribute is null
         if(dogBreedStdInDto.getWeight() == null){
             throw new DogBreedWeightMandatoryException("Weight attribute is mandatory");

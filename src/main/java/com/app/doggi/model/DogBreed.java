@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "DOG_BREED")
-public class DogBreed {
+public class DogBreed implements Serializable {
 
     //Atrtibutes
     @Id
