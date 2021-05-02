@@ -8,14 +8,14 @@ com/app/doggi/interfaces/mapper/INatureMapper.java
  com.app.doggi.interfaces.mapper.INatureMapper
 com/app/doggi/implementation/service/NatureServiceImpl.java
  com.app.doggi.implementation.service.NatureServiceImpl
-com/app/doggi/interfaces/mapper/IDogBreedMapper.java
- com.app.doggi.interfaces.mapper.IDogBreedMapper
+com/app/doggi/dtos/stdout/ColorStdOutDto.java
+ com.app.doggi.dtos.stdout.ColorStdOutDto
 com/app/doggi/dtos/stdin/DogBreedStdInDto.java
  com.app.doggi.dtos.stdin.DogBreedStdInDto
 com/app/doggi/utils/exceptionhandler/RestExceptionHandler.java
  com.app.doggi.utils.exceptionhandler.RestExceptionHandler
-com/app/doggi/model/DogBreed.java
- com.app.doggi.model.DogBreed
+com/app/doggi/DoggiApplication.java
+ com.app.doggi.DoggiApplication
 com/app/doggi/restcontroller/ColorRestController.java
  com.app.doggi.restcontroller.ColorRestController
 com/app/doggi/utils/exceptions/DogBreedHeightMandatoryException.java
@@ -72,9 +72,18 @@ com/app/doggi/utils/exceptions/DogBreedDoesNotHaveColorException.java
  com.app.doggi.utils.exceptions.DogBreedDoesNotHaveColorException
 com/app/doggi/repository/INatureRepository.java
  com.app.doggi.repository.INatureRepository
+<<<<<<< HEAD
+com/app/doggi/implementation/service/DogBreedServiceImpl.java
+ com.app.doggi.implementation.service.DogBreedServiceImpl
+com/app/doggi/interfaces/mapper/IDogBreedMapper.java
+ com.app.doggi.interfaces.mapper.IDogBreedMapper
+com/app/doggi/model/DogBreed.java
+ com.app.doggi.model.DogBreed
+=======
 com/app/doggi/DoggiApplication.java
  com.app.doggi.DoggiApplication
 com/app/doggi/dtos/stdout/ColorStdOutDto.java
  com.app.doggi.dtos.stdout.ColorStdOutDto
 com/app/doggi/repository/IColorRespository.java
  com.app.doggi.repository.IColorRespository
+>>>>>>> main
