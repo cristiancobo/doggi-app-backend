@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "DOG_BREED")
-public class DogBreed implements Serializable {
+public class DogBreed {
 
     //Atrtibutes
     @Id
