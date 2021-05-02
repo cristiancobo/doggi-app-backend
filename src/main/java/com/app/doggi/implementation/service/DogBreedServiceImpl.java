@@ -187,16 +187,10 @@ public class    DogBreedServiceImpl implements IDogBreedService {
         DogBreed dogBreed = iDogBreedRepository.findById(id).get();
         DogBreedStdOutDto dogBreedStdOutDto = IDogBreedMapperImpl.INTANCE.asDogBredToDogBreedStdOutDto(dogBreed);
         if(dogBreed.getColors().size() > 0){
-            for (int i = 0; i< dogBreed.getColors().size(); i++){
-                dogBreedStdOutDto.addColor(dogBreed.getColors().get(i));
-                dogBreed.getColors().remove(i);
-            }
+            dogBreed.getColors().clear();
         }
        if (dogBreed.getNatures().size()>0){
-           for (int i = 0; i< dogBreed.getNatures().size(); i++){
-               dogBreedStdOutDto.addNature(dogBreed.getNatures().get(i));
-               dogBreed.getNatures().remove(i);
-           }
+          dogBreed.getNatures().clear();
        }
         iDogBreedRepository.deleteById(id);
         return dogBreedStdOutDto;
