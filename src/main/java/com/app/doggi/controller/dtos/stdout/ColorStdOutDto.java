@@ -1,6 +1,6 @@
-package com.app.doggi.dtos.stdin;
+package com.app.doggi.controller.dtos.stdout;
 
-public class NatureStdInDto {
+public class ColorStdOutDto {
 
     //Attributes
     private Long id;

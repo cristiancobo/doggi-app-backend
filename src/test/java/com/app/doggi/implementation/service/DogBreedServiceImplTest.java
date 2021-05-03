@@ -1,14 +1,14 @@
 package com.app.doggi.implementation.service;
 
-import com.app.doggi.dtos.stdin.DogBreedStdInDto;
-import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
+import com.app.doggi.controller.dtos.stdin.DogBreedStdInDto;
+import com.app.doggi.controller.dtos.stdout.DogBreedStdOutDto;
 import com.app.doggi.model.Color;
 import com.app.doggi.model.DogBreed;
 import com.app.doggi.model.Nature;
 import com.app.doggi.repository.IColorRespository;
 import com.app.doggi.repository.IDogBreedRepository;
 import com.app.doggi.repository.INatureRepository;
-import com.app.doggi.utils.exceptionhandler.ErrorResponse;
+import com.app.doggi.service.implementation.DogBreedServiceImpl;
 import com.app.doggi.utils.exceptions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -16,8 +16,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Commit;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;

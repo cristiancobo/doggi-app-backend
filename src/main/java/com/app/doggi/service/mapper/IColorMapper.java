@@ -1,8 +1,8 @@
-package com.app.doggi.interfaces.mapper;
+package com.app.doggi.service.mapper;
 
 
 
-import com.app.doggi.dtos.stdout.ColorStdOutDto;
+import com.app.doggi.controller.dtos.stdout.ColorStdOutDto;
 import com.app.doggi.model.Color;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

@@ -1,4 +1,4 @@
-package com.app.doggi.dtos.stdout;
+package com.app.doggi.controller.dtos.stdout;
 
 import com.app.doggi.model.Color;
 import com.app.doggi.model.Nature;

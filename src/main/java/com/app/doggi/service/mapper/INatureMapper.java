@@ -1,6 +1,6 @@
-package com.app.doggi.interfaces.mapper;
+package com.app.doggi.service.mapper;
 
-import com.app.doggi.dtos.stdout.NatureStdOutDto;
+import com.app.doggi.controller.dtos.stdout.NatureStdOutDto;
 import com.app.doggi.model.Nature;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

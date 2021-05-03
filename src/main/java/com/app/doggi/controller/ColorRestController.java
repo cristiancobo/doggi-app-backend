@@ -1,9 +1,8 @@
-package com.app.doggi.restcontroller;
+package com.app.doggi.controller;
 
 
-import com.app.doggi.dtos.stdout.ColorStdOutDto;
-import com.app.doggi.interfaces.service.IColorService;
-import org.apache.coyote.Response;
+import com.app.doggi.controller.dtos.stdout.ColorStdOutDto;
+import com.app.doggi.service.interfaces.IColorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

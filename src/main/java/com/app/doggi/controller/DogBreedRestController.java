@@ -1,10 +1,10 @@
-package com.app.doggi.restcontroller;
+package com.app.doggi.controller;
 
 import com.app.doggi.DoggiApplication;
-import com.app.doggi.dtos.stdin.CountryStdInDto;
-import com.app.doggi.dtos.stdin.DogBreedStdInDto;
-import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
-import com.app.doggi.interfaces.service.IDogBreedService;
+import com.app.doggi.controller.dtos.stdin.CountryStdInDto;
+import com.app.doggi.controller.dtos.stdin.DogBreedStdInDto;
+import com.app.doggi.controller.dtos.stdout.DogBreedStdOutDto;
+import com.app.doggi.service.interfaces.IDogBreedService;
 import com.app.doggi.utils.exceptions.InvalidDataException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -44,7 +44,7 @@ public class DogBreedRestController {
         String countryName =  restTemplate.getForObject(url,CountryStdInDto.class).getName();
         dogBreedStdInDto.setCountry(countryName);
         DogBreedStdOutDto dogBreedStdOutDto = iDogBreedService.save(dogBreedStdInDto);
-        return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto, HttpStatus.OK);
+        return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto, HttpStatus.CREATED);
     }
     @GetMapping("/{id}")
     public ResponseEntity<DogBreedStdOutDto> findByIdDogBreed(@PathVariable Long id){

@@ -1,6 +1,6 @@
-package com.app.doggi.interfaces.service;
+package com.app.doggi.service.interfaces;
 
-import com.app.doggi.dtos.stdout.ColorStdOutDto;
+import com.app.doggi.controller.dtos.stdout.ColorStdOutDto;
 
 import java.util.List;
 

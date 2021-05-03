@@ -1,9 +1,9 @@
-package com.app.doggi.implementation.service;
+package com.app.doggi.service.implementation;
 
-import com.app.doggi.dtos.stdout.ColorStdOutDto;
-import com.app.doggi.interfaces.mapper.IColorMapper;
-import com.app.doggi.interfaces.mapper.IColorMapperImpl;
-import com.app.doggi.interfaces.service.IColorService;
+import com.app.doggi.controller.dtos.stdout.ColorStdOutDto;
+import com.app.doggi.service.mapper.IColorMapper;
+import com.app.doggi.service.mapper.IColorMapperImpl;
+import com.app.doggi.service.interfaces.IColorService;
 import com.app.doggi.model.Color;
 import com.app.doggi.repository.IColorRespository;
 import com.app.doggi.utils.exceptions.ColorDoesNotExistException;

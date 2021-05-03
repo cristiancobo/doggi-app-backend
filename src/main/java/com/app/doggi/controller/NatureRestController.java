@@ -1,7 +1,7 @@
-package com.app.doggi.restcontroller;
+package com.app.doggi.controller;
 
-import com.app.doggi.dtos.stdout.NatureStdOutDto;
-import com.app.doggi.interfaces.service.INatureService;
+import com.app.doggi.controller.dtos.stdout.NatureStdOutDto;
+import com.app.doggi.service.interfaces.INatureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

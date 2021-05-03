@@ -1,4 +1,4 @@
-package com.app.doggi.dtos.stdin;
+package com.app.doggi.controller.dtos.stdin;
 
 
 import javax.validation.constraints.Max;

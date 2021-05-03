@@ -1,8 +1,9 @@
 package com.app.doggi.implementation.service;
 
-import com.app.doggi.dtos.stdout.ColorStdOutDto;
+import com.app.doggi.controller.dtos.stdout.ColorStdOutDto;
 import com.app.doggi.model.Color;
 import com.app.doggi.repository.IColorRespository;
+import com.app.doggi.service.implementation.ColorServiceImpl;
 import com.app.doggi.utils.exceptions.ColorDoesNotExistException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

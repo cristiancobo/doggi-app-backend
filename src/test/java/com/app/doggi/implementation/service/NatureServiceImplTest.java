@@ -1,8 +1,9 @@
 package com.app.doggi.implementation.service;
 
-import com.app.doggi.dtos.stdout.NatureStdOutDto;
+import com.app.doggi.controller.dtos.stdout.NatureStdOutDto;
 import com.app.doggi.model.Nature;
 import com.app.doggi.repository.INatureRepository;
+import com.app.doggi.service.implementation.NatureServiceImpl;
 import com.app.doggi.utils.exceptions.NatureDoesNotExistException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

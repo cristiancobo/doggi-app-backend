@@ -1,7 +1,7 @@
-package com.app.doggi.interfaces.mapper;
+package com.app.doggi.service.mapper;
 
-import com.app.doggi.dtos.stdin.DogBreedStdInDto;
-import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
+import com.app.doggi.controller.dtos.stdin.DogBreedStdInDto;
+import com.app.doggi.controller.dtos.stdout.DogBreedStdOutDto;
 import com.app.doggi.model.DogBreed;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

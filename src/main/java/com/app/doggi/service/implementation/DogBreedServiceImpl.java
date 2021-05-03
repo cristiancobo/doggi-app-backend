@@ -1,9 +1,9 @@
-package com.app.doggi.implementation.service;
+package com.app.doggi.service.implementation;
 
-import com.app.doggi.dtos.stdin.DogBreedStdInDto;
-import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
-import com.app.doggi.interfaces.mapper.IDogBreedMapperImpl;
-import com.app.doggi.interfaces.service.IDogBreedService;
+import com.app.doggi.controller.dtos.stdin.DogBreedStdInDto;
+import com.app.doggi.controller.dtos.stdout.DogBreedStdOutDto;
+import com.app.doggi.service.mapper.IDogBreedMapperImpl;
+import com.app.doggi.service.interfaces.IDogBreedService;
 import com.app.doggi.model.Color;
 import com.app.doggi.model.DogBreed;
 import com.app.doggi.model.Nature;
@@ -14,7 +14,6 @@ import com.app.doggi.utils.exceptions.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 /**

@@ -1,9 +1,8 @@
-package com.app.doggi.interfaces.service;
+package com.app.doggi.service.interfaces;
 
 
-import com.app.doggi.dtos.stdin.DogBreedStdInDto;
-import com.app.doggi.dtos.stdout.DogBreedStdOutDto;
-import com.app.doggi.model.DogBreed;
+import com.app.doggi.controller.dtos.stdin.DogBreedStdInDto;
+import com.app.doggi.controller.dtos.stdout.DogBreedStdOutDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

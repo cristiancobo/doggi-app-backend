@@ -1,14 +1,11 @@
-package com.app.doggi.dtos.stdout;
+package com.app.doggi.controller.dtos.stdin;
 
-public class NatureStdOutDto {
+public class CountryStdInDto {
 
-    //Attributes
     private Long id;
-
 
     private String name;
 
-    //Access methods
     public Long getId() {
         return id;
     }
@@ -24,5 +21,4 @@ public class NatureStdOutDto {
     public void setName(String name) {
         this.name = name;
     }
-
 }

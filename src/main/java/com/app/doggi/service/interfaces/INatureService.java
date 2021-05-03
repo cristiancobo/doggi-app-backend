@@ -1,8 +1,8 @@
-package com.app.doggi.interfaces.service;
+package com.app.doggi.service.interfaces;
 
 
 
-import com.app.doggi.dtos.stdout.NatureStdOutDto;
+import com.app.doggi.controller.dtos.stdout.NatureStdOutDto;
 
 import java.util.List;
 

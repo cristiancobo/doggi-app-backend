@@ -1,9 +1,9 @@
-package com.app.doggi.implementation.service;
+package com.app.doggi.service.implementation;
 
-import com.app.doggi.dtos.stdout.NatureStdOutDto;
-import com.app.doggi.interfaces.mapper.INatureMapper;
-import com.app.doggi.interfaces.mapper.INatureMapperImpl;
-import com.app.doggi.interfaces.service.INatureService;
+import com.app.doggi.controller.dtos.stdout.NatureStdOutDto;
+import com.app.doggi.service.mapper.INatureMapper;
+import com.app.doggi.service.mapper.INatureMapperImpl;
+import com.app.doggi.service.interfaces.INatureService;
 import com.app.doggi.model.Nature;
 import com.app.doggi.repository.INatureRepository;
 import com.app.doggi.utils.exceptions.NatureDoesNotExistException;
