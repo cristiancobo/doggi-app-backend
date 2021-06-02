@@ -39,11 +39,17 @@ public class DogBreedRestController {
         if(bindingResult.hasErrors()) {
             throw new InvalidDataException(bindingResult);
         }
-        Long idCountry = dogBreedStdInDto.getIdCountry();
-        String url =  DoggiApplication.API_COUNTRIES_API_BASE_URL +idCountry;
-        String countryName =  restTemplate.getForObject(url,CountryStdInDto.class).getName();
-        dogBreedStdInDto.setCountry(countryName);
+        try {
+            Long idCountry = dogBreedStdInDto.getIdCountry();
+            String url =  DoggiApplication.API_COUNTRIES_API_BASE_URL +idCountry;
+            String countryName =  restTemplate.getForObject(url,CountryStdInDto.class).getName();
+            dogBreedStdInDto.setCountry(countryName);
+
+        }catch (Exception e){
+
+        }
         DogBreedStdOutDto dogBreedStdOutDto = iDogBreedService.save(dogBreedStdInDto);
+
         return new ResponseEntity<DogBreedStdOutDto>(dogBreedStdOutDto, HttpStatus.CREATED);
     }
     @GetMapping("/{id}")

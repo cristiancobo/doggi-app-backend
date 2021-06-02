@@ -2,7 +2,11 @@ com/app/doggi/implementation/service/DogBreedServiceImplTest.java
  com.app.doggi.implementation.service.DogBreedServiceImplTest
 com/app/doggi/implementation/service/ColorServiceImplTest.java
  com.app.doggi.implementation.service.ColorServiceImplTest
-com/app/doggi/DoggiApplicationTests.java
- com.app.doggi.DoggiApplicationTests
 com/app/doggi/implementation/service/NatureServiceImplTest.java
  com.app.doggi.implementation.service.NatureServiceImplTest
+com/app/doggi/DoggiApplicationTests.java
+ com.app.doggi.DoggiApplicationTests
+com/app/doggi/contract/DogBreedContractTest.java
+ com.app.doggi.contract.DogBreedContractTest
+com/app/doggi/component/color/ListColorsTest.java
+ com.app.doggi.component.color.ListColorsTest
